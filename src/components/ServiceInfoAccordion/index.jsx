@@ -18,10 +18,7 @@ export default function ServiceInfoAccordion(props) {
   const [country, setCountry] = React.useState([]);
 
   const handleChangeNHGroup = (e) => {
-    const inputValue = e.target.value;
-    if (/^[1-9]$|^[1-3][0-9]$|^45$/.test(inputValue) || inputValue === '') {
-      setNHGroup(inputValue);
-    }
+    setNHGroup(e.target.value);
   };
 
   const handleChange = (event) => {

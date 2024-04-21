@@ -84,7 +84,7 @@ const ServiceDialog = (props) => {
         </div>
 
         <div id='gcn-accordion' >
-          <GCNAccordion flexible type={props.type} initial={props.workValues} section={3}/>
+          <GCNAccordion giahan flexible={!props.type == "Gia hạn"} type={props.type} initial={props.workValues} section={3}/>
         </div>
 
         <Grid container md={12} spacing={3}>

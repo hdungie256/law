@@ -35,7 +35,7 @@ export default function GCNAccordion(props) {
           aria-controls="panel1-content"
           id="panel1-header"
         >
-          <Typography style={{ color: '#black' }}><b>{props.section}. Thông tin {props.flexible ? `đối tượng cần ${props.type}` : 'VBBH'} </b></Typography>
+          <Typography style={{ color: '#black' }}><b>{props.section}. Thông tin {props.flexible ? `đối tượng cần ${props.type}` : (props.giahan ? `đối tượng cần ${props.type}` : 'VBBH')} </b></Typography>
         </AccordionSummary>
         <AccordionDetails>
                     <div id='gcn-accordion-sogcn'>
@@ -46,7 +46,7 @@ export default function GCNAccordion(props) {
                     </div>
 
                     <div id='gcn-accordion-gcndate'>
-                        <DatePick initial={gcnDate} label={props.flexible ? 'Ngày nộp đơn/ Ngày cấp VBBH' : 'Ngày cấp VBBH'} onChange={(value) => setGcnDate(value)} value={gcnDate}/>
+                        <DatePick initial={gcnDate} label={props.flexible ? 'Ngày nộp đơn/ Ngày cấp VBBH' : (props.giahan ? 'Ngày nộp đơn' : 'Ngày cấp VBBH')} onChange={(value) => setGcnDate(value)} value={gcnDate}/>
                     </div>
         </AccordionDetails>
       </Accordion>
