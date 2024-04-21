@@ -394,7 +394,11 @@ const ServiceScreen= () =>{
             afterSave={async (res) => {
                 if (res) {
                   toggleThamDinhDialog();
-                  fixDashboardForThisWork(thisWork.current._id);
+
+                  if (isEditting){
+                    fixDashboardForThisWork(thisWork.current._id);
+                  }
+                  
                   fetchData(true);
                 }
               }}
