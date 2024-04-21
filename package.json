@@ -1,7 +1,7 @@
 {
   "name": "law",
   "version": "0.1.0",
-  "homepage": "https://hdungie256.github.io/law-cv",
+  "homepage": "https://hdungie256.github.io/law",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.11.1",
